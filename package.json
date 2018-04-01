@@ -4,15 +4,21 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "serve:dev": "nodemon --exec babel-node app.js"
+    "serve:dev": "nodemon --exec babel-node app.js",
+    "test": "mocha --compilers js:babel-register",
+    "nyc": "nyc mocha --compilers js:babel-register"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "assert": "^1.4.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.10.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-2": "^6.24.1"
+    "mocha": "^5.0.5",
+    "nyc": "^11.6.0"
   }
 }
