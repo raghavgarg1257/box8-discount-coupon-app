@@ -15,11 +15,6 @@ Using ES6 syntax, with [Babel](http://babeljs.io/).
     npm install
 
 
-## Run
-Test run the script to debug
-
-    npm run start
-
 ## Test Suite
 To run test
 
