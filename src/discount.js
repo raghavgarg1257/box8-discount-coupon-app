@@ -69,7 +69,7 @@ export default function getDiscount(cartItems, couponCode, outletId) {
       return response.error('Coupon code does not apllied. Something went wrong');
   }
 
-  // 4. check for minimums/maximums
+  // 5. check for minimums/maximums
   if (afterCouponPrices.discount > coupon.maximum_discount) {
     afterCouponPrices.discount = coupon.maximum_discount;
   }
@@ -80,6 +80,6 @@ export default function getDiscount(cartItems, couponCode, outletId) {
     return response.error(`Coupon code does not apllied. The minimum amount after discount should be more than ${coupon.minimum_delivery_amount_after_discount}`);
   }
 
-  // 5. give response
+  // 6. give response
   return response.ok('Coupon applied', afterCouponPrices.discount, afterCouponPrices.cashback);
 }
