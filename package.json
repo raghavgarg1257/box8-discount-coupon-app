@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "babel-node app.js",
     "serve:dev": "nodemon --exec babel-node app.js",
     "test": "mocha --compilers js:babel-register",
     "nyc": "nyc mocha --compilers js:babel-register"
